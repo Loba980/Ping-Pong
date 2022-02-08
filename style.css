@@ -19,11 +19,13 @@ font-size: 22px;
 font-family: 'Supermercado One', cursive;
 }
 
-h4{
+.footer{
     font-family: 'Supermercado One', cursive; 
-    background-color: grey;
+    background-color: white;
     line-height: 2;
-    margin-bottom: 100px;
+    bottom: 0;
+    width: 100%;
+    position: fixed;
     
 
 }
