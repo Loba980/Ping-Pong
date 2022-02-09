@@ -21,12 +21,12 @@ font-family: 'Supermercado One', cursive;
 
 .footer{
     font-family: 'Supermercado One', cursive; 
-    background-color: white;
+    background-color: blue;
+    color: white;
     line-height: 2;
     bottom: 0;
     width: 100%;
     position: fixed;
-    
 
 }
 
