@@ -40,3 +40,9 @@ font-family: 'Supermercado One', cursive;
     text-align: left;
     font-size: 20px;
 }
+
+canvas{
+      border:3px solid white;
+      border-radius: 20px;
+      box-shadow:  5px 5px 5px white;
+  }
