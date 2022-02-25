@@ -1,9 +1,4 @@
-
-/*created by prashant shukla and help from loba */
-
-rightWristY = 0;
-rightWristX = 0;
-scoreRightWrist = 0;
+/*created by prashant shukla */
 
 var paddle2 =10,paddle1=10;
 
@@ -25,61 +20,14 @@ var ball = {
     dy:3
 }
 
-game_status="";
-
 function setup(){
-canvas =  createCanvas(700,600);
-canvas.parent('canvas');
-
-video = createCapture(VIDEO);
-video.size(700, 600);
-video.hide();
-
-poseNet = ml5.poseNet(video, modelLoaded);
-poseNet.on('pose', gotPoses);
+  var canvas =  createCanvas(700,600);
 }
 
-function modelLoaded() {
-  console.log('Model Loaded!');
-}
-
-function gotPoses(results)
-{
-  if(results.length > 0)
-  {
-
-    rightWristY = results[0].pose.rightWrist.y;
-    rightWristX = results[0].pose.rightWrist.x;
-    scoreRightWrist =  results[0].pose.keypoints[10].score;
-    console.log(scoreRightWrist);
-  }
-}
-
-function startGame(){
-  game_status="start";
-  document.getElementById("status").innerHTML="Game Is Loaded";
-}
-
-function restart(){
-  playerscore=0;
-  pcscore=0;
-}
 
 function draw(){
- image(video, 0, 0, 700, 600);
 
  background(0); 
-
- if(scoreRightWrist > 0.2)
- {
-   fill("red");
-   stroke("red");
-   circle(rightWristX, rightWristY, 30);
- }
-
-if(game_status=="start"){
-
-}
 
  fill("black");
  stroke("black");
@@ -117,6 +65,7 @@ if(game_status=="start"){
    //function move call which in very important
     move();
 }
+
 
 
 //function reset when ball does notcame in the contact of padde
